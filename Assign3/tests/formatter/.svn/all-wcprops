@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/s10_softwaredesign/!svn/ver/3708/kodakandla_kundurthy/Assign3/tests/formatter
+END
+TestTargetWriter.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/s10_softwaredesign/!svn/ver/3708/kodakandla_kundurthy/Assign3/tests/formatter/TestTargetWriter.java
+END
+TestToUpper.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/s10_softwaredesign/!svn/ver/3700/kodakandla_kundurthy/Assign3/tests/formatter/TestToUpper.java
+END
+TestToLower.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/s10_softwaredesign/!svn/ver/3700/kodakandla_kundurthy/Assign3/tests/formatter/TestToLower.java
+END
+TestDuplicateRemover.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/s10_softwaredesign/!svn/ver/3700/kodakandla_kundurthy/Assign3/tests/formatter/TestDuplicateRemover.java
+END
+TestReplaceStupid.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/s10_softwaredesign/!svn/ver/3700/kodakandla_kundurthy/Assign3/tests/formatter/TestReplaceStupid.java
+END

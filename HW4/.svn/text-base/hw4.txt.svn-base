@@ -1,0 +1,47 @@
+HW4 Due 11:59PM May 10th.
+
+***There will be no reviews for this Homework***
+
+Write your answer in this file. No extra files will be graded.
+
+1. What did you essentially learn in this course about design? 
+   
+   Iterative: A good design cannot be achieved right from the word go, it is a iterative process.
+   Extensibility and Change: The design should be able accommodate change and extend functionality with minimum change 
+   to the existing code.  
+   Simplicity: If the design can be made simple, it should.
+   Testable: Design that is not easy to test, is a bad design.
+   Tools: There are several tools to gauge the the quality of design. Those inputs must be taken into account. 
+   Reuse Existing Ideas: Command design problems, have been solved and categorized into Design Patterns. Good designs use this 
+   knowledge to their benefit.
+               
+   
+2. When asked to design a software application, how would you approach it?
+   
+   List out tasks to be performed.
+   Begin Coding in either in the TDD or a TFD fashion.
+   Automate the testing process using Unit testing tools.
+   Start with failing tests, make it right and re factor.
+   Code and test in a lock step manner.
+   Treat warnings as errors.
+   Follow naming conventions.
+   Let the design evolve during the development.  
+   Use tools to quantity design quality. Examples: Test Coverage, Code Duplication, Class Dependency Analysis.
+   Keep the UI thin.
+    
+    
+3. What are some of the general guidelines you would follow when designing?
+    
+	 Start early on the design. Use TDD approach to develop applications.
+	 Follow the Design Principles.
+	 Strive to reduce dependency between different modules in the application. Make sure that our classes/methods have high cohesion and low coupling.
+	 Research the literature for any existing design patterns that are relevant to our application and see if we can make use of them.
+	 Fix broken windows. Unattended or unfixed issues in the design leads to gradual degradation of the quality design.
+	 Take the necessary steps to avoid perils of bad design.
+	 Make time regularly to pay technical debt.
+	 Have our design/code reviewed constantly by peers and experienced designers.
+	 Use tools to testify quality of the design and find if any coding issues exist.
+
+     
+   
+

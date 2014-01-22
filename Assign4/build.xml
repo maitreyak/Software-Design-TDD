@@ -1,0 +1,63 @@
+<project name="assign4" default="runTests" basedir=".">
+	<property name="app.name" value="assign4" />
+	<property name="build.dir" value="build" />
+	<property name="classes.dir" value="${build.dir}/bin" />
+	<property name="testclasses.dir" value="${build.dir}/testclasses" />
+
+	<target name="runTests" depends="compileTests, prepare">
+		<junit printsummary="yes" failureProperty="test.failure">
+			<classpath>
+				<pathelement location="${classes.dir}" />
+				<pathelement location="${testclasses.dir}" />
+				<pathelement path="lib/junit-4.8.1.jar" />
+			</classpath>
+
+			<formatter type="plain" />
+
+			<test name="SuiteOfTests" outfile="${build.dir}/testresult" />
+		</junit>
+		<fail message="test failed" if="test.failure" />
+	</target>
+
+	<target name="prepare" depends="compileTests">
+		<mkdir dir="${basedir}/Detectors/detectors" />
+		<mkdir dir="${basedir}/tests/TestDetectors/emptyDetectors/detectors" />
+		<mkdir dir="${basedir}/tests/TestDetectors/palindromeDetector/detectors" />
+		<mkdir dir="${basedir}/tests/TestDetectors/allDetectors/detectors" />
+		
+		<copy  todir="${basedir}/Detectors/detectors">
+			<fileset dir="${build.dir}/bin/detectors" excludes="Detector.class"/>
+		</copy>		
+		
+		<copy  todir="${basedir}/tests/TestDetectors/palindromeDetector/detectors" file = "${build.dir}/bin/detectors/PalindromeDetector.class"/>
+		<copy  todir="${basedir}/tests/TestDetectors/alphabeticalDetector/detectors" file = "${build.dir}/bin/detectors/AlphabeticalOrderDetector.class"/>	
+		<copy  todir="${basedir}/tests/TestDetectors/allDetectors/detectors" >
+			<fileset dir= "${build.dir}/bin/detectors" excludes="Detector.class"/>
+		</copy>
+	</target>
+	
+	<target name="compileTests" depends="compile">
+		<mkdir dir="${testclasses.dir}" />
+		<javac srcdir="tests/" destdir="${testclasses.dir}">
+			<classpath>
+				<pathelement path="${classes.dir}" />
+				<pathelement path="lib/junit-4.8.1.jar" />
+			</classpath>
+			<include name="**/*.java" />
+		</javac>
+	</target>
+
+	<target name="compile" depends="clean">
+		<mkdir dir="${classes.dir}" />
+		<javac srcdir="src/" destdir="${classes.dir}" debug="true">
+			<include name="**/*.java" />
+			
+		</javac>		
+	</target>
+
+	<target name="clean">
+		<delete dir="${build.dir}" />
+		<delete dir="${basedir}/Detectors" />
+		<delete dir="${basedir}/tests/TestDetectors" />
+	</target>
+</project>

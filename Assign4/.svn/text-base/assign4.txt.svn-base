@@ -1,0 +1,60 @@
+Assignment 4: Due 11:59PM April 26
+
+Please note, due to travel schedule, I will close review requests
+at 9PM CDT Thursday April 22nd.
+
+A "special word" detector is used in an application to detect
+special words. What makes a word special is not known
+ahead of time (this is configurable). A word may be special
+in one way, more than one way, or not special at all. If a 
+word is known to be special in at least one way, it is determined
+to be special. If it is not special in any known ways, it is
+determined to be not special.
+
+Design your SpecialWordDetector in such a way that it is
+configured to detect different kinds of special words. Design
+it in such a way that if I decide to introduced a new 
+detection logic, not a single line of code has to be changed.
+Device a mechanism such that I can simply give you a binary
+of a detection logic (conforming to some reasonable restrictions
+or expectations you may wish to place) and the next time
+you create an instance of the SpecialWordDetector, it will
+use this new logic in addition to the ones already present (and
+not removed).
+
+Drive your SpecialWordDetector using a test case. Don't write
+any main (or Main).
+
+Here is an example:
+
+Assume, I have a detection logic that finds if a word is a palindrome.
+
+Then the following is true:
+
+detector = new SpecialWordDetector();
+assertTrue(detector.isSpecialWord("madam"));
+assertFalse(detector.isSpecialWord("almost"));
+
+Now, if I introduce a detection logic that finds if the letters
+in the word are in alphabetical order (but removed the palindrome
+detection logic), then the following is true:
+
+detector = new SpecialWordDetector();
+assertFalse(detector.isSpecialWord("madam"));
+assertTrue(detector.isSpecialWord("almost"));
+
+Now, if I introduce both the logic, then the following is true:
+
+detector = new SpecialWordDetector();
+assertTrue(detector.isSpecialWord("madam"));
+assertTrue(detector.isSpecialWord("almost"));
+
+Finally, if I removed both the detection logic, then the following is
+true:
+
+detector = new SpecialWordDetector();
+assertFalse(detector.isSpecialWord("madam"));
+assertFalse(detector.isSpecialWord("almost"));
+
+
+Please start early and ask for frequent reviews.

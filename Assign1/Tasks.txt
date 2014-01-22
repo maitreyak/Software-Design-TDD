@@ -1,0 +1,48 @@
+Tasks:
+
+Create Cart   - done
+Check if the Cart has 7 slots.  - - done
+Fill Cart with default character "_".  -- done --removed placed in constructor
+Empty the Cart.  -- done - removed
+Check if the Cart is empty.   - done
+Place a letter in the Cart.   - done
+Place a letter in the Cart at a location where there is already another 
+letter exists - done
+Get Cart String  - done
+
+Create Shelf  -- done
+Check if Shelf is filled with Uppercase leters only - done
+Fill Shelf Slots with random characters   - done
+create a random character generator   - done
+get letter from shelf at given index   - done
+check the getLeter funciotn for out of bounds - done
+replace a given shelf slot with random character   - done
+get Shelf String to display for player- done
+set Shelf String to use for testing purpose in game testing-done
+
+Create  a score manager with totalScore as parameter- done
+update totalscore when cart is collected  - done 
+check if cart word is palindrome  - done
+write a method to calculate value of the word - done
+check if updatescore is checking for palindrome -done
+Update score when letter is discarded from shelf - done
+Update score when cart string is discarded - done
+CHeck score after discard
+
+Write method to Collect Cart.
+check index out of bounds
+check if cart is replaced after collection
+method to discard cart
+check Collect Cart before a proper word is formed.   ( Negative test)
+check discard cart before any alphabets in cart 
+discard letter at index in shelf
+check index out of bounds
+check if letter is replaced after discartletter
+get total score
+set shelf string for test purpose
+
+
+get dictionary
+dictionary to static constructor
+is word formed
+check if dictionary is static object or not

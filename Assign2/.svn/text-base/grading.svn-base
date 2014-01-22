@@ -1,0 +1,21 @@
+Assignment 2 Grading.
+
+Answer to (a) [5]:
+Answer to (b) [5]:
+Answer to (c) [5]:
+Answer to (d) [5]:
+Answer to (e) [5]:
+Answer to (f) [5]:
+
+All tests pass [10]:
+Test quality [10]:
+Using mocks [20]:
+Code quality [10]: -2
+
+Provider2:
+temperature is a poor name for provider instance reference.
+
+Design quality and structure [20]: -5
+TemperatureClient: YAGNI, violates OCP
+
+Total [100]: 93

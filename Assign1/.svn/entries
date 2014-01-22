@@ -1,0 +1,139 @@
+8
+
+dir
+2613
+https://agile.cs.uh.edu/svn/s10_softwaredesign/kodakandla_kundurthy/Assign1
+https://agile.cs.uh.edu/svn/s10_softwaredesign
+
+
+
+2010-04-01T07:29:53.093750Z
+2607
+venkat
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+3f9ad9af-e003-7d4a-9208-eb7349785bfa
+
+.classpath
+file
+
+
+
+
+2010-02-19T17:58:37.000000Z
+807880a309a584261cfc2d1dcb2b38df
+2010-02-21T20:28:59.093750Z
+1321
+rohithkodakandla
+
+
+
+
+
+.classpath.r1152
+.classpath.r1518
+.classpath.mine
+
+.project
+file
+
+
+
+
+2010-02-17T05:15:04.000000Z
+ffeb50f92145a8a7e06a63b2d56f1bd4
+2010-02-11T07:48:31.609375Z
+433
+rohithkodakandla
+
+Tasks.txt
+file
+
+
+
+
+2010-02-23T05:16:19.000000Z
+8e394ec4f7035f0a89450b414b9cc3f5
+2010-02-23T05:24:24.593750Z
+1463
+maitreyakundurthy
+
+assign1.txt
+file
+
+
+
+
+2010-02-17T05:15:04.000000Z
+fa1bd03496cd74c29218633db46c7bff
+2010-02-08T10:44:44.156250Z
+345
+venkat
+
+build
+dir
+
+
+
+add
+
+build.xml
+file
+
+
+
+
+2010-02-23T04:17:14.000000Z
+21295738a0f7ccac9b9edaf5287aa995
+2010-02-17T13:45:21.296875Z
+919
+venkat
+
+buildGrading.xml
+file
+
+
+
+
+2010-04-01T07:38:49.000000Z
+09eb5f3d69c9cd32f7089f40b4192f67
+2010-04-01T07:29:53.093750Z
+2607
+venkat
+
+grading
+file
+
+
+
+
+2010-04-01T07:38:49.000000Z
+f0d9a257a1b855d66f97f8409e982f41
+2010-04-01T07:29:53.093750Z
+2607
+venkat
+
+lib
+dir
+
+resource
+dir
+
+src
+dir
+
+tests
+dir
+

@@ -1,0 +1,72 @@
+Assignment 1: Due 11:59PM Monday Feb. 22nd
+
+Please check in code frequently, in very small steps. Feel free to ask
+for review anytime. Hint: Start very very small and ask for frequent
+reviews.
+
+Using Test First Development approach (write a little test and then a 
+little code, repeat) create a game of LetterCart.
+
+You can create a simply command line program or a GUI, the choice is 
+your. In any case, keep the driver code (the one that performs user 
+interactions) separated from the rest of the classes. The main focus is 
+to drive the design of the key class(es) using TDD. The test cases will 
+not take any input. Instead they will hardcode test sample data into 
+appropriate classes.
+
+The game has a cart and a shelf. The cart has seven slots or locations.
+The shelf has a total of six slots or locations.
+
+The objective of the game is to fill the cart with letter from the 
+shelf so that
+(a) the user maximizes the points gained, and
+(b) the word formed is correct spelling
+
+The game keeps a total of scores the user has earned during the play
+session. The user can continue to play as long as he or she wants.
+
+At any time the user can either discard the cart or collect it. 
+
+To collect a cart, the characters on the cart should form a correct 
+spelling. When the spelling is correct, the player can either collect
+or continue to form a bigger word. When the player collects a cart,
+the cart is emptied and the total of the points from the letters
+is added to the score total.
+
+If the user discards a cart, the total of the letters plus 10 is 
+subtracted from the score total.
+
+The shelf is a random collection of characters. The user is presented 
+with six random letters from a through z. The user can either select a 
+letter or discard a letter. When a letter is selected or discarded, 
+that slot on the shelf is filled with a random letter. If the user
+discards a letter, the point for that letter is taken from the score
+total.
+
+Each character has a point associated with it based on its position in
+the alphabet sequence (a is 1, b is 2, ...).
+
+Rules of the game:
+1.  If a user discards a letter, he loses the associated points for that letter.
+2. No point is gained until the cart is collected.
+3. To collect a cart, the word formed should be right spelling.
+4. Letters in the cart can't be moved.
+5. The points gained when a cart is collected is equal to the total of 
+points for each letter that make up the cart. So, for example, if
+the word is bat, the total points for that cart when collected is
+2 + 1 + 20 = 23.
+6. A player may discard a cart at anytime and lose the total of points
+for each letter plus 10 (for example, discarding a cart with abc will 
+result in a total of 1 + 2 + 3 + 10 points = 16 points loss)
+7. If the collected word is a palindrome, the user gains 50 more 
+points. So, for example, if the user places mom, the score gain is
+13 + 15 + 13 + 50 = 91 points.
+8. You can find the total points the user has at any given time.
+
+Deliverables:
+A task list
+All code
+If you decide to use any third party library, please check them into
+a lib directory under Assign1 directory.
+No files outside this Assign1 directory will be used for grading this
+assignment.

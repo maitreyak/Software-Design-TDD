@@ -1,0 +1,97 @@
+<project name="assign1" default="codeCoverageReport" basedir=".">
+	<property name="app.name" value="assign1" />
+	<property name="build.dir" value="build" />
+	<property name="classes.dir" value="${build.dir}/bin" />
+	<property name="testclasses.dir" value="${build.dir}/testclasses" />
+<property name="cobertura.dir" value="/opt/java/cobertura-1.9.3"/>	<property name="instrumented.dir" value="${build.dir}/instrumented"/>
+	<property name="coveragereport.dir" value="${build.dir}/coveragereports"/>    
+
+    <target name="codeCoverageReport" depends="runInstrumentedTests">
+        <cobertura-report format="html" destdir="${coveragereport.dir}">
+            <fileset dir="src"/>
+            <fileset dir="tests"/>
+        </cobertura-report>
+
+        <delete dir="${instrumented.dir}"/>
+    </target>
+
+    <target name="runInstrumentedTests" depends="instrumentClasses">
+        <junit fork="yes" dir="${basedir}" failureProperty="test.instrumented.failure">
+            <classpath location="${instrumented.dir}"/>
+            <classpath location="${classes.dir}"/>
+            <classpath location="${testclasses.dir}"/>
+            <classpath location="lib/junit-4.8.1.jar"/>
+	    <classpath location="lib/jazzy-core.jar" />
+
+            <classpath refid="cobertura.classpath"/>
+
+            <formatter type="xml"/>
+            <test name="SuiteOfTests"/>
+        </junit>
+        <fail message="test failed" if="test.instrumented.failure"/>
+    </target>
+
+    <target name="instrumentClasses" depends="runTests">
+        <delete file="cobertura.ser"/>
+
+        <path id="cobertura.classpath">
+            <fileset dir="${cobertura.dir}">
+                <include name="cobertura.jar"/>
+                <include name="lib/**/*.jar"/>
+            </fileset>
+        </path>
+
+        <taskdef classpathref="cobertura.classpath" resource="tasks.properties"/>
+
+        <cobertura-instrument todir="${instrumented.dir}">
+            <ignore regex="org.apache.log4j.*"/>
+            <fileset dir="${classes.dir}"/>
+        </cobertura-instrument>
+
+    </target>
+
+	<target name="runTests" depends="compileTests">
+		<junit printsummary="yes" failureProperty="test.failure">
+			<classpath>
+				<pathelement path="${classes.dir}" />
+				<pathelement location="${testclasses.dir}" />
+				<pathelement location="lib/junit-4.8.1.jar" />
+	    			<pathelement path="lib/jazzy-core.jar" />
+			</classpath>
+
+			<formatter type="plain" />
+
+			<test name="SuiteOfTests" outfile="${build.dir}/testresult" />
+		</junit>
+		<fail message="test failed" if="test.failure" />
+	</target>
+
+	<target name="compileTests" depends="compile">
+		<mkdir dir="${testclasses.dir}" />
+		<javac srcdir="tests/" destdir="${testclasses.dir}">
+			<classpath>
+				<pathelement path="${classes.dir}" />
+				<pathelement location="${testclasses.dir}" />					
+				<pathelement location="lib/junit-4.8.1.jar" />
+	    			<pathelement path="lib/jazzy-core.jar" />
+			</classpath>
+			<include name="**/*.java" />
+		</javac>
+	</target>
+
+	<target name="compile" depends="clean">
+		<mkdir dir="${classes.dir}" />
+		<javac srcdir="src/" destdir="${classes.dir}" debug="true">
+			<classpath>
+	    			<pathelement path="lib/jazzy-core.jar" />
+			</classpath>		
+			<include name="**/*.java" />
+		</javac>		
+	</target>
+
+	<target name="clean">
+		<delete dir="${build.dir}" />
+		<delete file="cobertura.ser" />
+		<delete file="TEST-SuiteOfTests.xml" />
+	</target>
+</project>

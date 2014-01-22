@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/s10_softwaredesign/!svn/ver/2128/kodakandla_kundurthy/Assign2/java/tests/providers
+END
+TestProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/s10_softwaredesign/!svn/ver/2128/kodakandla_kundurthy/Assign2/java/tests/providers/TestProvider.java
+END
+MockSuccessfulProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/s10_softwaredesign/!svn/ver/2128/kodakandla_kundurthy/Assign2/java/tests/providers/MockSuccessfulProvider.java
+END
+MockFailedProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/s10_softwaredesign/!svn/ver/2128/kodakandla_kundurthy/Assign2/java/tests/providers/MockFailedProvider.java
+END

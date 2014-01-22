@@ -1,0 +1,27 @@
+Supports adding new logic without any change in code [20pts]:
+
+Tests pass [10 pts]:
+
+Test quality [10 pts]: -2
+Test need to isolate from directory dependency. Can be effectively 
+mocked without need to provide different path.
+
+Code Coverage [20 pts]: -4 pts
+
+Design quality [20 pts]:
+
+
+Code quality [10 pts]:
+
+Meets coding guidelines [10 pts]:
+http://groups.google.com/group/uhcss10sd/browse_thread/thread/d2358183249a982c/eb29060aa3699335?lnk=gst&q=indentation#eb29060aa3699335
+
+http://groups.google.com/group/uhcss10sd/browse_thread/thread/553c86bd8c3105b2/40757ab1c3faf57c?lnk=gst&q=indentation#40757ab1c3faf57c
+
+Indent code properly.
+Give one blank line between methods.
+Do not give blank lines in the top or in the bottom of methods.
+Give one free space after comma between parameters.
+Give one free space around operators.
+
+Total [100pts]: -94 pts

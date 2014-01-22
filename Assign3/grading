@@ -1,0 +1,16 @@
+Test coverage [20pts]:
+
+Test quality [20pts]:
+
+Operations can be attached to basic writers (String or File) [10pts]:
+
+No code change needed if you add another operation [20pts]:
+
+All Tests Pass [10pts]:
+
+Code Quality [10pts]:
+
+Design and structure [10pts]:
+TargetWriter YAGNI
+
+Total [100pts]: 100

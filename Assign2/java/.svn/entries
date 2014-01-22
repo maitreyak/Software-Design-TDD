@@ -1,0 +1,75 @@
+8
+
+dir
+5191
+https://agile.cs.uh.edu/svn/s10_softwaredesign/kodakandla_kundurthy/Assign2/java
+https://agile.cs.uh.edu/svn/s10_softwaredesign
+
+
+
+2010-03-27T03:04:14.156250Z
+2138
+maitreyakundurthy
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+3f9ad9af-e003-7d4a-9208-eb7349785bfa
+
+TemperatureFinder.java
+file
+
+
+
+
+2010-03-21T00:01:12.000000Z
+d20ccb2c01bb590829a5c3cadf466953
+2010-03-04T21:32:12.968750Z
+1548
+venkat
+
+build.xml
+file
+
+
+
+
+2010-03-27T02:47:28.000000Z
+7593487842d299dc190d6b2d9040831c
+2010-03-27T03:04:14.156250Z
+2138
+maitreyakundurthy
+has-props
+
+lib
+dir
+
+providers.jar
+file
+
+
+
+
+2010-03-21T00:01:12.000000Z
+61edf6271e8e971f45b9389689c29eef
+2010-03-04T21:32:12.968750Z
+1548
+venkat
+has-props
+
+src
+dir
+
+tests
+dir
+

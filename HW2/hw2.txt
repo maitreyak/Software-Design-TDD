@@ -1,0 +1,127 @@
+HW2 Due 11:59PM Monday April 5, 2010
+
+Assume a class named Mediator is in a package named mediator. This 
+class depends on several components that are in a package named 
+components. Each of these classes depend on the Mediator.
+(a) Draw a picture of the above design
+	
+	Please find  A.jpeg file.
+
+(b) What is the value of A, I, and D' for each package and also overall D'.
+
+	Value of A, I, D' for Package Mediator:     A = 0/(1) = 0
+									I = n/(n+n) = 1/2
+									D' = |A+I-1| = 1/2
+	
+	Value of A, I, D' for Package Components:   A = 0/(n) = 0
+									     I = n/(n+n) = 1/2
+									     D' = |A+I-1| = 1/2
+
+						Average D' =    (1/2 + 1/2)/2 = 1/2
+									     
+(c) What is wrong with the above design? Explain the consequence.
+
+	(i). Two concrete classes are depending on each other. This results in less stable design. If one of the two dependent classes change then it may results in ripple of code changes.
+	(ii).  Very rigid code.
+	(iii). If a new component comes in and if Mediator depends on that component then Mediator class would require a change in design and potentially other component classes need to modified.
+	(iv). Concrete classes Components package have reference to Concrete class Mediator and concrete class Mediator depends upon concrete classes Components. This affects the reusability of both Mediator and components. 
+		
+(d) Redesign (show diagram)
+
+	(a). Design Plan1: Please find file D.jpeg
+	(b). Design plan 2: pleade find file D_PackageBreak.jpeg
+	(c). Design plan 3: pleade find file D_componenthelper.jpeg
+	
+(e) Recalculate A, I, and D' for each package and also overall D'.
+
+	For plan1:
+
+	Value of A, I, D' for Package Mediator:     A = 1/(1+1) = 1/2
+									I = 1/(1+n)
+									When n tends to be much larger than 1, denominator in the above equation tends to be much larger than numeraor, and therefore I will be close to 0.
+									D' = |A+I-1| = |1/2-1 +0| = 1/2
+	
+	
+	Value of A, I, D' for Package Components:   A = 1/(1+n) 
+									     I = n/(n+1)
+									     When n tends to be much larger than 1, denominator in the above equation will be equal to the numeraor, and therefore I will be close to 1.
+									     D' = |A+I-1| = |1/2 + 1 - 1 | = 1/2
+	Average D' = 1/2 = 0.5
+
+	For Plan 2:
+	
+	Value of A, I, D' for Package MediatorInterface:     A = 1/(1+0) = 1
+								                       I = 0/(0+n) = 0
+											D' = |A+I-1| = |1+ 0 -1| = 0
+
+	Value of A, I, D' for Package Mediator:     A = 0/(0+1) = 0
+									I = 1/(1+0) = 1
+									D' = |A+I-1| = |0 + 1 -1| = 0
+
+	Value of A, I, D' for Package ComponentsInterface:     A = 1/(1+0) = 1
+								                       I = 0/(0+1) = 0
+											D' = |A+I-1| = |1+ 0 -1| = 0
+				
+	Value of A, I, D' for Package Components:   	A = 0/(0+n) = 0
+										I = n/(n+0) =1
+										D' = |A+I-1| = |0 +1 - 1 | = 0
+	
+	Average D' = 0
+	
+	For plan3:
+
+	Value of A, I, D' for Package Mediator:     A = 1/(1+1) = 1/2
+									I = 1/(1+1) = 1/2
+									D' = |A+I-1| = |1/2+ 1/2 -1| = 0
+		
+	Value of A, I, D' for Package Components:   A = 1/(2+n) 
+									When n tends to be much larger than 1, denominator in the above equation tends to be much larger than numeraor, and therefore A will be close to 0.		
+									     I = 1/(1+1) = 1/2
+									     D' = |A+I-1| = |1/2 + 0 - 1 | = 1/2
+									     
+	Average D' = (1/2 + 0 )/2 = 0.25
+	
+
+	
+(f) What design principles did you use in your design. Explain.
+
+	Following principles were considered while designing all the plans.
+	
+	(i). DIP: Instead of concrete class depending on other concrete class, in the new design we have concrete classes depending upon abstract classes. This considerably improves stability.
+	(ii) OCP: 
+	
+	Design Plan 1: 
+	
+	Since concrete class Mediator depend upon Components interface Mediator class need not be modified in case a new Component is introduced. Similarly Components need not change in case of
+	any changes made to concrete class Mediator. This design plan still has large D' value. We can decrease it further by redesigning as in Plan 2.
+	
+	Design Plan 2:
+	
+	By introducing two totally abstract packages to the above design, reduce the D' value to 0. The current design has all the advantages of its predecessor with a reduced D' value.
+	
+	Design Plan 3:
+	
+	With this design plan Components need not be aware of the Mediator Interface. Components depend on helper class to provide all the required information. 
+	The disadvantage:
+	Components depend on Concrete class Helper. Violates DIP.
+	If a change occurs in the helper all components need to be changed. Violates OCP. 
+	
+	
+	Conclusion: Plan 2 will result in better design of the application and results in more stable system. 
+	Both Components and Mediator can be resued with this design.
+	
+
+[Total 10pts:] 8 pts
+(a 1 pt):
+(b 1 pts):
+(c 2 pt):
+(d 3 pts)Different design options: 
+-1 Design can be reduced to D' of 0
+[correction +1]
+(e 2 pts) For different design options:
+-2 For plan 1, I should be 1, A should be 0, and D' 0 for components.
+Plan 2, in calculation of I for MediatorInterface,
+ I = 0/(0+n) should read  I = 0/(0+n+1)
+In Plan 2, ComponentsInterface you need to consider n relationships 
+coming in, not just 1.
+(f 1 pts)
