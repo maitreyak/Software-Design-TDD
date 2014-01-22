@@ -1,7 +1,0 @@
-Rules to follow to use our code:
-
-1). All the logics should be in one single package named "detectors".
-2). All the Detector Logics should inherit from the Interface "Detector"
-
-Note: By default, all the compiled Detectors in detector package are placed under "Detectors" folder
-under the base directory when you run build.xml file 
